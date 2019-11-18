@@ -1,7 +1,8 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "resources/js",
+    "baseUrl": "./",
+//    "baseUrl": "resources/js",
     "outDir": "public/dist/out-tsc",
     "sourceMap": true,
     "declaration": false,

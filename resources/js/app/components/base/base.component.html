@@ -1,0 +1,26 @@
+<mat-toolbar color="primary">
+	<mat-toolbar-row>
+		<span>Informatīvo sistēmu drošība</span>
+		<span class="spacer"></span>
+
+		<button mat-button mat-icon-button (click)="logout()" aria-label="Iziet">
+			<mat-icon>exit_to_app</mat-icon>
+		</button>
+	</mat-toolbar-row>
+</mat-toolbar>
+
+<nav mat-tab-nav-bar>
+	<a mat-tab-link
+	   *ngFor="let link of tabs"
+	   [routerLink]="'/' + link.path"
+	   routerLinkActive #rla="routerLinkActive"
+	   [active]="rla.isActive">
+		{{ link.data.title }}
+	</a>
+</nav>
+
+<div class="container-fluid">
+	<router-outlet></router-outlet>
+</div>
+
+
